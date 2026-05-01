@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online BMI (Body Mass Index) calculator. Easily check if you are at a healthy weight. Fast, accurate, and easy to use.">
+    <meta name="keywords" content="bmi calculator, body mass index, healthy weight calculator, fitness calculator">
+    <title>BMI Calculator - Check Your Body Mass Index | CalcPlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="14.01"></line><line x1="12" y1="14" x2="12" y2="14.01"></line><line x1="8" y1="14" x2="8" y2="14.01"></line><line x1="16" y1="10" x2="16" y2="10.01"></line><line x1="12" y1="10" x2="12" y2="10.01"></line><line x1="8" y1="10" x2="8" y2="10.01"></line><line x1="16" y1="18" x2="16" y2="18.01"></line><line x1="12" y1="18" x2="12" y2="18.01"></line><line x1="8" y1="18" x2="8" y2="18.01"></line></svg>
+                Calc<span>Plus</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container calc-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> / Fitness & Health / BMI Calculator
+        </div>
+
+        <div class="calc-container">
+            <h1>BMI Calculator</h1>
+            
+            <form id="bmi-form">
+                <div class="form-group">
+                    <label for="height">Height</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="height" class="form-control has-suffix" placeholder="e.g. 175" required>
+                        <span class="input-suffix">cm</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="weight" class="form-control has-suffix" placeholder="e.g. 70" required>
+                        <span class="input-suffix">kg</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Calculate BMI</button>
+            </form>
+
+            <div id="result-box" class="result-box">
+                <div class="result-title">Your BMI</div>
+                <div id="bmi-value" class="result-value">0.0</div>
+                <div id="bmi-category" class="result-subtext"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CalcPlus. All rights reserved.</p>
+    </footer>
+
+    <script src="bmi.js"></script>
+</body>
+</html>
