@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online mortgage calculator. Quickly estimate your monthly mortgage payments including principal and interest. Fast and accurate.">
+    <meta name="keywords" content="mortgage calculator, online mortgage calculator, home loan calculator, calculate mortgage, monthly payment calculator">
+    <title>Mortgage Calculator - Free Online Tool | CalcPlus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="14.01"></line><line x1="12" y1="14" x2="12" y2="14.01"></line><line x1="8" y1="14" x2="8" y2="14.01"></line><line x1="16" y1="10" x2="16" y2="10.01"></line><line x1="12" y1="10" x2="12" y2="10.01"></line><line x1="8" y1="10" x2="8" y2="10.01"></line><line x1="16" y1="18" x2="16" y2="18.01"></line><line x1="12" y1="18" x2="12" y2="18.01"></line><line x1="8" y1="18" x2="8" y2="18.01"></line></svg>
+                Calc<span>Plus</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container calc-page">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> / Financial Calculators / Mortgage Calculator
+        </div>
+
+        <div class="calc-container">
+            <h1>Mortgage Calculator</h1>
+            
+            <form id="mortgage-form">
+                <div class="form-group">
+                    <label for="home-price">Home Price</label>
+                    <div class="input-wrapper">
+                        <span class="input-prefix">$</span>
+                        <input type="number" id="home-price" class="form-control has-prefix" value="300000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="down-payment">Down Payment</label>
+                    <div class="input-wrapper">
+                        <span class="input-prefix">$</span>
+                        <input type="number" id="down-payment" class="form-control has-prefix" value="60000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="loan-term">Loan Term</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="loan-term" class="form-control has-suffix" value="30" required>
+                        <span class="input-suffix">Years</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest-rate">Interest Rate</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="interest-rate" class="form-control has-suffix" step="0.01" value="5.5" required>
+                        <span class="input-suffix">%</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Calculate Payment</button>
+            </form>
+
+            <div id="result-box" class="result-box">
+                <div class="result-title">Monthly Payment (P&I)</div>
+                <div id="monthly-payment" class="result-value">$0.00</div>
+                <div id="total-payment-sub" class="result-subtext"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CalcPlus. All rights reserved.</p>
+    </footer>
+
+    <script src="mortgage.js"></script>
+</body>
+</html>
